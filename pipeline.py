@@ -12,6 +12,7 @@ def transform(input_file: str, output_file: str) -> None:
 
     # Add derived column
     df["total"] = df["quantity"] * df["price"]
+    df["discount"] = df["total"] * 0.10
 
     df.to_csv(output_file, index=False)
 
